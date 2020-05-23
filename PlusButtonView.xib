@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlusButtonView" customModule="Camilyo_App" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlusButtonView" customModule="Camilyo_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <view opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT3-eI-e6K">
+                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30230629280821919" colorSpace="calibratedRGB"/>
+                </view>
+                <view autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzK-mq-M7P">
+                    <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Menu Plus Button" translatesAutoresizingMaskIntoConstraints="NO" id="cSk-i3-Cfe">
+                            <rect key="frame" x="20" y="20" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="4Ok-5e-EVL"/>
+                                <constraint firstAttribute="height" constant="16" id="vAp-Xl-G5e"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.035294117647058823" green="0.49019607843137253" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="cSk-i3-Cfe" firstAttribute="centerY" secondItem="tzK-mq-M7P" secondAttribute="centerY" id="CIg-i5-AMp"/>
+                        <constraint firstItem="cSk-i3-Cfe" firstAttribute="centerX" secondItem="tzK-mq-M7P" secondAttribute="centerX" id="DQQ-wr-FP4"/>
+                        <constraint firstAttribute="height" constant="56" id="N1O-fI-N2O"/>
+                        <constraint firstAttribute="width" constant="56" id="d9Z-nN-wjj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="28"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView hidden="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="grouped" separatorStyle="none" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nOK-wB-2lz">
+                    <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Tum-07-UuF"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="pZb-Qc-7xS"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tzK-mq-M7P" secondAttribute="trailing" constant="16" id="48P-Po-fYY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tzK-mq-M7P" secondAttribute="bottom" constant="16" id="67G-tj-mja"/>
+                <constraint firstAttribute="bottom" secondItem="MT3-eI-e6K" secondAttribute="bottom" id="Dy1-dd-sKN"/>
+                <constraint firstItem="MT3-eI-e6K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EXL-dS-T1n"/>
+                <constraint firstItem="MT3-eI-e6K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bKm-Tb-GG6"/>
+                <constraint firstItem="tzK-mq-M7P" firstAttribute="bottom" secondItem="nOK-wB-2lz" secondAttribute="bottom" priority="750" id="d95-ac-Uym"/>
+                <constraint firstItem="tzK-mq-M7P" firstAttribute="top" secondItem="nOK-wB-2lz" secondAttribute="top" priority="750" id="eno-br-J1i"/>
+                <constraint firstItem="tzK-mq-M7P" firstAttribute="leading" secondItem="nOK-wB-2lz" secondAttribute="leading" priority="750" id="iXe-7u-Wy6"/>
+                <constraint firstItem="tzK-mq-M7P" firstAttribute="trailing" secondItem="nOK-wB-2lz" secondAttribute="trailing" id="mjH-Qr-TV8"/>
+                <constraint firstAttribute="trailing" secondItem="MT3-eI-e6K" secondAttribute="trailing" id="rBU-Bt-Nv3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="addButtonView" destination="tzK-mq-M7P" id="q5z-a6-lGu"/>
+                <outlet property="addButtonViewHeightConstraint" destination="N1O-fI-N2O" id="whb-0G-5fl"/>
+                <outlet property="bottomTableViewConstraint" destination="d95-ac-Uym" id="hAO-Vg-vvJ"/>
+                <outlet property="leadingTableViewConstraint" destination="iXe-7u-Wy6" id="xUO-OS-TEF"/>
+                <outlet property="optionsTableView" destination="nOK-wB-2lz" id="ufz-xH-IoC"/>
+                <outlet property="overlayView" destination="MT3-eI-e6K" id="EOe-E7-GeK"/>
+                <outlet property="topTableViewConstraint" destination="eno-br-J1i" id="ha9-de-PtA"/>
+                <outletCollection property="gestureRecognizers" destination="jvp-3p-iNc" appends="YES" id="tOX-eb-hoL"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="83"/>
+        </view>
+        <tapGestureRecognizer cancelsTouchesInView="NO" id="jvp-3p-iNc">
+            <connections>
+                <action selector="addButtonTappedWithGestureRecognizer:" destination="iN0-l3-epB" id="URF-E8-N0H"/>
+                <outlet property="delegate" destination="iN0-l3-epB" id="J1w-cb-Ujf"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="Add Menu Plus Button" width="16" height="16"/>
+    </resources>
+</document>
